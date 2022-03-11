@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CharacterController2D : MonoBehaviour
 {
-    [SerializeField] private float movementSpeed = 300f;
-    [SerializeField] private int jumpForce = 200;
+    [SerializeField] private float movementSpeed = 50f;
+    [SerializeField] private int jumpForce = 250;
 
     private float horizontalMove = 0f;
     public Transform groundCheckLeft;
@@ -20,11 +20,14 @@ public class CharacterController2D : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") / movementSpeed;
         transform.position += new Vector3(horizontalMove, 0, 0);
+    }
 
+    void Update()
+    {
         isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckRight.position);
 
         if (Input.GetButtonDown("Jump") && isGrounded)
