@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class CharacterController2D : MonoBehaviour
 {
-    [SerializeField] private float x_addition = 0.01f;
-    [SerializeField] private string left = "q";
-    [SerializeField] private string right = "d";
-    [SerializeField] private string up = "z";
+    [SerializeField] private float movementSpeed = 300f;
     [SerializeField] private int jumpForce = 200;
 
+    private float horizontalMove = 0f;
     public Transform groundCheckLeft;
     public Transform groundCheckRight;
     private bool isGrounded = true;
@@ -27,19 +25,13 @@ public class CharacterController2D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(right))
-        {
-            transform.position = transform.position + new Vector3(x_addition, 0, 0);
-        }
-        if (Input.GetKey(left))
-        {
-            transform.position = transform.position - new Vector3(x_addition, 0, 0);
-        }
+        horizontalMove = Input.GetAxisRaw("Horizontal") / movementSpeed;
+        transform.position += new Vector3(horizontalMove, 0, 0);
 
         isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckRight.position);
         updateJumpCooldown();
 
-        if (Input.GetKey(up) && isGrounded && jumpCooldown)
+        if (Input.GetButtonDown("Jump") && isGrounded && jumpCooldown)
         {
             rb.AddForce(new Vector2(0f, jumpForce));
             jumpCooldown = false;
