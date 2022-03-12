@@ -13,12 +13,6 @@ public class CharacterController2D : MonoBehaviour
     private bool isGrounded = true;
     public Rigidbody2D rb;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -35,4 +29,6 @@ public class CharacterController2D : MonoBehaviour
             rb.AddForce(new Vector2(0f, jumpForce));
         }
     }
+
+    
 }

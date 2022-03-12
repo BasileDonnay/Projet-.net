@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int health = 100;
+    public int maxHealth = 100;
+    private int health;
     //public GameObject deathEffect;
+
+    void Start()
+    {
+        health = maxHealth;
+    }
 
     public void TakeDamage (int damage)
     {
@@ -14,6 +20,16 @@ public class Health : MonoBehaviour
         if (health <= 0)
         {
             Die();
+        }
+    }
+
+    public void GiveHealth (int amount)
+    {
+        health += amount;
+
+        if (health > maxHealth)
+        {
+            health = maxHealth;
         }
     }
 
