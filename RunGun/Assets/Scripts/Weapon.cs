@@ -6,24 +6,38 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
-    private int maxGunAmount = 2;
-    public int gunSelect = 1;
-    public bool fireButtonDown = false;
-    public int AutomaticCooldown = 100;
-    private int AutomaticCooldownCounter;
+    private int gunSelect = 0;
+    private bool fireButtonDown = false;
+    public int AutomaticCooldown = 15;
+    private int AutomaticCooldownCounter = 1;
+    private List<string> inventory = new List<string>();
+    public int pistolCooldown = 30;
+    private int pistolCooldownCounter = 0;
+    public SpriteRenderer spriteRenderer;
+    public Sprite pistolSprite;
+    public Sprite automaticSprite;
 
     // Start is called before the first frame update
     void Start()
     {
-        AutomaticCooldownCounter = AutomaticCooldown;
+        inventory.Add("Pistol");
     }
 
     // Update is called once per frame
     void Update()
     {
         GunSelection();
+        
+        CheckFireSemis();
 
-        CheckShootInputs();
+        ChangeGunSprites();
+    }
+
+    void FixedUpdate()
+    { 
+        CheckFireAutos();
+
+        CalculatePistolCooldown();
     }
 
     void GunSelection ()
@@ -31,26 +45,60 @@ public class Weapon : MonoBehaviour
         if (Input.GetButtonDown("Vertical") && Input.GetAxisRaw("Vertical") == -1)
         {
             gunSelect++;
-            if (gunSelect > maxGunAmount)
+            if (gunSelect >= inventory.Count)
             {
-                gunSelect = 1;
+                gunSelect = 0;
+            }
+
+            fireButtonDown = false;
+
+            ChangeGunSprites();
+        }
+    }
+
+    void CheckFireSemis()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if (inventory[gunSelect] == "Pistol" && pistolCooldownCounter == 0)
+            {
+                ShootPistol();
+                fireButtonDown = false;
+                pistolCooldownCounter = 1;
             }
         }
     }
 
-    void CheckShootInputs()
+    void ChangeGunSprites()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (inventory[gunSelect] == "Pistol")
         {
-            if (gunSelect == 1)
+            spriteRenderer.sprite = pistolSprite;
+        }
+        if (inventory[gunSelect] == "Automatic")
+        {
+            spriteRenderer.sprite = automaticSprite;
+        }
+    }
+
+    void CalculatePistolCooldown ()
+    {
+        if (pistolCooldownCounter >= 1)
+        {
+            pistolCooldownCounter++;
+
+            if(pistolCooldownCounter >= pistolCooldown)
             {
-                ShootPistol();
+                pistolCooldownCounter = 0;
             }
         }
+    }
 
+    void CheckFireAutos()
+    {
         if (Input.GetButton("Fire1"))
         {
-            if (gunSelect == 2)
+            if (inventory[gunSelect] == "Automatic")
             {
                 fireButtonDown = true;
             }
@@ -78,6 +126,17 @@ public class Weapon : MonoBehaviour
         {
             AutomaticCooldownCounter = AutomaticCooldown;
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        }
+    }
+
+    public void AddGunToInventory(string gun)
+    {
+        if (inventory.IndexOf(gun) > 0)
+        {
+            
+        } else
+        {
+            inventory.Add(gun);
         }
     }
 }

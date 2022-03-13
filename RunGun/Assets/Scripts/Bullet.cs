@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 20f;
     public Rigidbody2D rb;
-    public int timeBeforeExplode = 500;
+    public int timeBeforeExplode = 50;
     public int damage = 35;
 
     // Start is called before the first frame update
@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         timeBeforeExplode--;
         if (timeBeforeExplode < 0)
