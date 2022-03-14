@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyWeapon : MonoBehaviour
+public class EnemyPistol : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
@@ -21,12 +21,12 @@ public class EnemyWeapon : MonoBehaviour
         delayCounter--;
         if (delayCounter <= 0)
         {
-            Shoot();
+            ShootPistol();
             delayCounter = shootDelay;
         }
     }
 
-    void Shoot()
+    void ShootPistol()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
