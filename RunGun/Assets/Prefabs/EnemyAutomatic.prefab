@@ -236,6 +236,7 @@ MonoBehaviour:
   heart1: {fileID: 672846766410929555}
   heart2: {fileID: 672846766410929555}
   heart3: {fileID: 672846766410929555}
+  deathEffect: {fileID: 8885089416783658042, guid: e4b244ca4cce8f146a0111d8c56472c4, type: 3}
 --- !u!114 &672846765581736175
 MonoBehaviour:
   m_ObjectHideFlags: 0

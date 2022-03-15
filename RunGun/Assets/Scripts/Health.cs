@@ -10,7 +10,7 @@ public class Health : MonoBehaviour
     public GameObject heart1;
     public GameObject heart2;
     public GameObject heart3;
-    //public GameObject deathEffect;
+    public GameObject deathEffect;
 
     void Start()
     {
@@ -56,7 +56,7 @@ public class Health : MonoBehaviour
 
     void Die ()
     {
-        //Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
