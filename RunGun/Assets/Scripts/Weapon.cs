@@ -6,6 +6,7 @@ public class Weapon : MonoBehaviour
 {
     public GameObject pistol;
     public GameObject automatic;
+    public GameObject sniper;
     private int gunSelect = 0;
     private List<string> inventory = new List<string>();
 
@@ -41,11 +42,19 @@ public class Weapon : MonoBehaviour
         {
             pistol.SetActive(true);
             automatic.SetActive(false);
+            sniper.SetActive(false);
         }
         if (inventory[gunSelect] == "Automatic")
         {
             pistol.SetActive(false);
             automatic.SetActive(true);
+            sniper.SetActive(false);
+        }
+        if (inventory[gunSelect] == "Sniper")
+        {
+            pistol.SetActive(false);
+            automatic.SetActive(false);
+            sniper.SetActive(true);
         }
     }
 
