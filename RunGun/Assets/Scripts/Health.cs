@@ -6,7 +6,11 @@ public class Health : MonoBehaviour
 {
     public int maxHealth = 100;
     private int health;
-    //public GameObject deathEffect;
+
+    public GameObject heart1;
+    public GameObject heart2;
+    public GameObject heart3;
+    public GameObject deathEffect;
 
     void Start()
     {
@@ -21,6 +25,15 @@ public class Health : MonoBehaviour
         {
             Die();
         }
+
+        if (health <= 66)
+        {
+            heart1.SetActive(false);
+        }
+        if (health <= 33)
+        {
+            heart2.SetActive(false);
+        }
     }
 
     public void GiveHealth (int amount)
@@ -31,11 +44,19 @@ public class Health : MonoBehaviour
         {
             health = maxHealth;
         }
+        if (health >= 66)
+        {
+            heart1.SetActive(true);
+        }
+        if (health >= 33)
+        {
+            heart2.SetActive(true);
+        }
     }
 
     void Die ()
     {
-        //Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
