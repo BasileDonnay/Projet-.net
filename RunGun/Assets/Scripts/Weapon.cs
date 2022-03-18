@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour
     public GameObject pistol;
     public GameObject automatic;
     public GameObject sniper;
+    public GameObject bow;
     private int gunSelect = 0;
     private List<string> inventory = new List<string>();
 
@@ -14,6 +15,7 @@ public class Weapon : MonoBehaviour
     void Start()
     {
         inventory.Add("Pistol");
+        inventory.Add("Bow");
     }
 
     // Update is called once per frame
@@ -43,18 +45,28 @@ public class Weapon : MonoBehaviour
             pistol.SetActive(true);
             automatic.SetActive(false);
             sniper.SetActive(false);
+            bow.SetActive(false);
         }
         if (inventory[gunSelect] == "Automatic")
         {
             pistol.SetActive(false);
             automatic.SetActive(true);
             sniper.SetActive(false);
+            bow.SetActive(false);
         }
         if (inventory[gunSelect] == "Sniper")
         {
             pistol.SetActive(false);
             automatic.SetActive(false);
             sniper.SetActive(true);
+            bow.SetActive(false);
+        }
+        if (inventory[gunSelect] == "Bow")
+        {
+            pistol.SetActive(false);
+            automatic.SetActive(false);
+            sniper.SetActive(false);
+            bow.SetActive(true);
         }
     }
 
