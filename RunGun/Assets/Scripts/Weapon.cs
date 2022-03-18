@@ -15,7 +15,6 @@ public class Weapon : MonoBehaviour
     void Start()
     {
         inventory.Add("Pistol");
-        inventory.Add("Bow");
     }
 
     // Update is called once per frame
