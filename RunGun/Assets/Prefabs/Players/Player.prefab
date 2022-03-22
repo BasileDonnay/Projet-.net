@@ -96,13 +96,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bowMaxDrawTime: 100
-  bowDrawCounter: 0
   bowMaxSpeed: 30
   bowMinSpeed: 1
-  bowSpeedCounter: 0
   bowMaxPower: 100
   bowMinPower: 10
-  bowPowerCounter: 0
   arrowPrefab: {fileID: 2285644505164653653, guid: 881fa8aa359031b4c83a0cb5f9ae8340, type: 3}
   bowFirePoint: {fileID: 3806741930677274173}
 --- !u!1 &3945153503409814067
@@ -471,8 +468,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3945153504245196620}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -0.06, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.216, y: 0.136, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 3945153503409814066}
   m_RootOrder: 1
@@ -1255,7 +1252,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3945153505226672289}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3199997, y: 0.07000029, z: 0}
+  m_LocalPosition: {x: 1.769, y: -0.028, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3945153503409814066}
