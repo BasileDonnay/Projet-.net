@@ -7,7 +7,12 @@ public class Parametres : MonoBehaviour
 
     public void SetVolume(float volume)
     {
-        audioMixer.SetFloat("volume", volume);
+        audioMixer.SetFloat("Musique", volume);
+    }
+
+    public void SetSound(float volume)
+    {
+        audioMixer.SetFloat("Effets sonores", volume);
     }
 
     public void SetFullScreen(bool isFullScreen)

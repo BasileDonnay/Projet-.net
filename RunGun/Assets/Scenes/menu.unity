@@ -518,7 +518,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2131531458}
         m_TargetAssemblyTypeName: Parametres, Assembly-CSharp
-        m_MethodName: SetVolume
+        m_MethodName: SetSound
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
