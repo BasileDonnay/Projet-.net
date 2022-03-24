@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:RunGun/Assets/Prefabs/Bullets/BowArrow.prefab.meta
 guid: 881fa8aa359031b4c83a0cb5f9ae8340
 PrefabImporter:
+=======
+guid: 2c5991193ce59ac4daf1f6450f2e92e4
+folderAsset: yes
+DefaultImporter:
+>>>>>>> menu:RunGun/Assets/Audio.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
