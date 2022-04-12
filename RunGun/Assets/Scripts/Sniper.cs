@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Sniper : MonoBehaviour
 {
+    public string fire = "Fire1";
     public int sniperCooldown = 30;
     private int sniperCooldownCounter = 0;
     public GameObject bulletPrefab;
@@ -35,7 +36,7 @@ public class Sniper : MonoBehaviour
 
     void CheckFireSniper()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown(fire))
         {
             if (sniperCooldownCounter == 0)
             {

@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public GameObject pistol;
-    public GameObject automatic;
-    public GameObject sniper;
-    public GameObject bow;
+    public List<GameObject> guns = new List<GameObject>();
+    private List<string> gunNames = new List<string>() { "Pistol", "Automatic", "Sniper", "Bow" };
     private int gunSelect = 0;
     private List<string> inventory = new List<string>();
 
@@ -39,6 +37,18 @@ public class Weapon : MonoBehaviour
 
     void ChangeActiveGun()
     {
+        for (int i = 0; i < guns.Count; i++)
+        {
+            if (inventory[gunSelect] == gunNames[i])
+            {
+                guns[i].SetActive(true);
+            }
+            else
+            {
+                guns[i].SetActive(false);
+            }
+        }
+        /*
         if (inventory[gunSelect] == "Pistol")
         {
             pistol.SetActive(true);
@@ -67,6 +77,7 @@ public class Weapon : MonoBehaviour
             sniper.SetActive(false);
             bow.SetActive(true);
         }
+        */
     }
 
     public void AddGunToInventory(string gun)
@@ -74,7 +85,8 @@ public class Weapon : MonoBehaviour
         if (inventory.IndexOf(gun) > 0)
         {
             
-        } else
+        } 
+        else
         {
             inventory.Add(gun);
         }

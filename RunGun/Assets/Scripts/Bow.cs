@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bow : MonoBehaviour
 {
+    public string fire = "Fire1";
     private bool fireButtonDown = false;
 
     public int bowMaxDrawTime = 100;
@@ -39,7 +40,7 @@ public class Bow : MonoBehaviour
 
     void CheckFireBow()
     {
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton(fire))
         {
             fireButtonDown = true;
 

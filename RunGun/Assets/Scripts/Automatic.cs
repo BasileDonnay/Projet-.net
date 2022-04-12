@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Automatic : MonoBehaviour
 {
+    public string fire = "Fire1";
     private bool fireButtonDown = false;
     public int AutomaticCooldown = 15;
     private int AutomaticCooldownCounter = 1;
@@ -24,7 +25,7 @@ public class Automatic : MonoBehaviour
 
     void CheckFireAutos()
     {
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton(fire))
         {
             fireButtonDown = true;
         }
