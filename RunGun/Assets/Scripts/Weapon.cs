@@ -49,36 +49,6 @@ public class Weapon : MonoBehaviour
                 guns[i].SetActive(false);
             }
         }
-        /*
-        if (inventory[gunSelect] == "Pistol")
-        {
-            pistol.SetActive(true);
-            automatic.SetActive(false);
-            sniper.SetActive(false);
-            bow.SetActive(false);
-        }
-        if (inventory[gunSelect] == "Automatic")
-        {
-            pistol.SetActive(false);
-            automatic.SetActive(true);
-            sniper.SetActive(false);
-            bow.SetActive(false);
-        }
-        if (inventory[gunSelect] == "Sniper")
-        {
-            pistol.SetActive(false);
-            automatic.SetActive(false);
-            sniper.SetActive(true);
-            bow.SetActive(false);
-        }
-        if (inventory[gunSelect] == "Bow")
-        {
-            pistol.SetActive(false);
-            automatic.SetActive(false);
-            sniper.SetActive(false);
-            bow.SetActive(true);
-        }
-        */
     }
 
     public void AddGunToInventory(string gun)
