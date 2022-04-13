@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerAmount : MonoBehaviour
 {
+    [Range(1, 4)]
     public int playerAmount = 1;
     public List<GameObject> players = new List<GameObject>();
 
