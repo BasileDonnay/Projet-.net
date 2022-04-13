@@ -7,7 +7,7 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private float movementSpeed = 50f;
     [SerializeField] private int jumpForce = 250;
     public string horizontal = "Horizontal";
-    public string jump = "Jump";
+    public string vertical = "Vertical";
 
     private float horizontalMove = 0f;
     public Transform groundCheckLeft;
@@ -26,7 +26,7 @@ public class CharacterController2D : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckRight.position);
 
-        if (Input.GetButtonDown(jump) && isGrounded)
+        if (Input.GetButtonDown(vertical) && Input.GetAxisRaw(vertical) == 1 && isGrounded)
         {
             rb.AddForce(new Vector2(0f, jumpForce));
         }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    public string vertical = "Vertical";
     public List<GameObject> guns = new List<GameObject>();
     private List<string> gunNames = new List<string>() { "Pistol", "Automatic", "Sniper", "Bow" };
     private int gunSelect = 0;
@@ -23,7 +24,7 @@ public class Weapon : MonoBehaviour
 
     void GunSelection ()
     {
-        if (Input.GetButtonDown("Vertical") && Input.GetAxisRaw("Vertical") == -1)
+        if (Input.GetButtonDown(vertical) && Input.GetAxisRaw(vertical) == -1)
         {
             gunSelect++;
             if (gunSelect >= inventory.Count)
