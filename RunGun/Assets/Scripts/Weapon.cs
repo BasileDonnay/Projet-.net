@@ -6,7 +6,7 @@ public class Weapon : MonoBehaviour
 {
     public string vertical = "Vertical";
     public List<GameObject> guns = new List<GameObject>();
-    private List<string> gunNames = new List<string>() { "Pistol", "Automatic", "Sniper", "Bow" };
+    private List<string> gunNames = new List<string>() { "Pistol", "Automatic", "Sniper", "Bow", "Rpg"};
     private int gunSelect = 0;
     private List<string> inventory = new List<string>();
 

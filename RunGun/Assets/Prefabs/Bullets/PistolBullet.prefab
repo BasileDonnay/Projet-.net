@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6024319887773431952}
   - component: {fileID: 539773996212055850}
   - component: {fileID: -7203471858650509308}
+  - component: {fileID: 6807983868165525542}
   m_Layer: 0
   m_Name: PistolBullet
   m_TagString: Untagged
@@ -134,7 +135,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 752c9fa84fc55ce4681e60933d375342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  rb: {fileID: 6024319887773431952}
   timeBeforeExplode: 50
   damage: 35
+--- !u!114 &6807983868165525542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2678368656203834357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957cabfd753b2d74e93c09dfe79e15d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  rb: {fileID: 6024319887773431952}

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2242078448052087894}
   - component: {fileID: 6863573921902637115}
   - component: {fileID: 5805133321422193858}
+  - component: {fileID: -301259504652570680}
   m_Layer: 0
   m_Name: AutomaticBullet
   m_TagString: Untagged
@@ -134,7 +135,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 752c9fa84fc55ce4681e60933d375342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  rb: {fileID: 2242078448052087894}
   timeBeforeExplode: 50
   damage: 25
+--- !u!114 &-301259504652570680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7614640732890707763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957cabfd753b2d74e93c09dfe79e15d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  rb: {fileID: 2242078448052087894}
