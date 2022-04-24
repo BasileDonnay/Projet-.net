@@ -62,7 +62,6 @@ public class Bow : MonoBehaviour
             {
                 bowSpeedCounter = bowMaxSpeed;
             }
-            AudioManager.instance.PlayClipAt(tirSon, transform.position);
         }
         else
         {
@@ -83,5 +82,6 @@ public class Bow : MonoBehaviour
         Arrow arrowScript = arrow.GetComponent<Arrow>();
         arrowScript.IncreaseDamage(bowPowerCounter / 1000);
         arrowScript.IncreaseSpeed(bowSpeedCounter);
+        AudioManager.instance.PlayClipAt(tirSon, transform.position);
     }
 }

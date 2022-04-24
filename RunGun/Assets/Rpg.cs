@@ -43,9 +43,9 @@ public class Rpg : MonoBehaviour
             {
                 ShootRpg();
                 rpgCooldownCounter = 1;
+                AudioManager.instance.PlayClipAt(tirSon, transform.position);
             }
         }
-        AudioManager.instance.PlayClipAt(tirSon, transform.position);
     }
 
     void ShootRpg()

@@ -9,6 +9,7 @@ public class Pistol : MonoBehaviour
     private int pistolCooldownCounter = 0;
     public GameObject bulletPrefab;
     public Transform pistolFirePoint;
+    public AudioClip tirSon;
 
     // Update is called once per frame
     void Update()
@@ -42,6 +43,7 @@ public class Pistol : MonoBehaviour
             {
                 ShootPistol();
                 pistolCooldownCounter = 1;
+                AudioManager.instance.PlayClipAt(tirSon, transform.position);
             }
         }
     }

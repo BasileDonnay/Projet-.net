@@ -29,6 +29,7 @@ public class Automatic : MonoBehaviour
         if (Input.GetButton(fire))
         {
             fireButtonDown = true;
+            AudioManager.instance.PlayClipAt(tirSon, transform.position);
         }
         else
         {
@@ -39,7 +40,7 @@ public class Automatic : MonoBehaviour
         {
             ShootAutomatic();
         }
-        AudioManager.instance.PlayClipAt(tirSon, transform.position);
+        
     }
 
     void ShootAutomatic()
