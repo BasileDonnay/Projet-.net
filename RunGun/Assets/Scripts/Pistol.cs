@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pistol : MonoBehaviour
 {
     public string fire = "Fire1";
-    public int pistolCooldown = 30;
+    public int pistolCooldown = 29;
     private int pistolCooldownCounter = 0;
     public GameObject bulletPrefab;
     public Transform pistolFirePoint;
