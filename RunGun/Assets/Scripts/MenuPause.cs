@@ -8,13 +8,13 @@ public class MenuPause : MonoBehaviour
     public void Pause()
     {
         menuPause.SetActive(true);
-        Time.timeScale = 0f;
+        Time.timeScale = 0f; // permet que lorsqu'on appuie sur pause, le jeu s'arrete aussi et ne continue pas
     }
 
     public void Reprendre()
     {
         menuPause.SetActive(false);
-        Time.timeScale = 1f;
+        Time.timeScale = 1f; //le jeu reprend
     }
 
     public void RetournerM(int sceneID)

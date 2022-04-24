@@ -6,7 +6,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] playlist;
     public AudioSource audioSource;
 
-    public AudioMixerGroup effetsSonoresMixer;
+    public AudioMixerGroup effetsSonoresMixer; //dis le mixer
 
     public static AudioManager instance;
 
@@ -21,7 +21,7 @@ public class AudioManager : MonoBehaviour
         instance = this;
     }
 
-    
+    // Lance la musique
     void Start()
     {
         audioSource.clip = playlist[0];
