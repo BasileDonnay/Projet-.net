@@ -34470,6 +34470,7 @@ MonoBehaviour:
   playlist:
   - {fileID: 8300000, guid: b6b684f5c9a192f4697a6e87f1770f3d, type: 3}
   audioSource: {fileID: 1667114777}
+  effetsSonoresMixer: {fileID: -430670080361617260, guid: 6136efdc7da367c4aa2e760a0f3cf725, type: 2}
 --- !u!82 &1667114777
 AudioSource:
   m_ObjectHideFlags: 0

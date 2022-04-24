@@ -3,13 +3,16 @@ using UnityEngine;
 
 public class PickupObjet : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision){
+    public AudioClip sound;
 
- if( collision.CompareTag("Player")){
-
-Inventory.instance.AddCoins(1);
-     Destroy(gameObject);
- }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if( collision.CompareTag("Player"))
+        {
+            AudioManager.instance.PlayClipAt(sound, transform.position);
+            Inventory.instance.AddCoins(1);
+            Destroy(gameObject);
+        }
 
 
 
