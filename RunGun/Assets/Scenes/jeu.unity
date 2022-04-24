@@ -35545,6 +35545,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9083145342550248573, guid: e989ff0c4211ef14893397b4d89b0722, type: 3}
+      propertyPath: tirSon
+      value: 
+      objectReference: {fileID: 8300000, guid: fe8b6472cd15f1b4eb84714506181adf, type: 3}
+    - target: {fileID: 9083145342588200253, guid: e989ff0c4211ef14893397b4d89b0722, type: 3}
+      propertyPath: tirSon
+      value: 
+      objectReference: {fileID: 8300000, guid: be5e0e72d7a2743408ff7d11131dc847, type: 3}
+    - target: {fileID: 9083145342645035405, guid: e989ff0c4211ef14893397b4d89b0722, type: 3}
+      propertyPath: tirSon
+      value: 
+      objectReference: {fileID: 8300000, guid: 39e2f9c9e5665124a983f2bd4521b085, type: 3}
     - target: {fileID: 9083145342863610790, guid: e989ff0c4211ef14893397b4d89b0722, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -35605,5 +35617,9 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9083145344277878938, guid: e989ff0c4211ef14893397b4d89b0722, type: 3}
+      propertyPath: tirSon
+      value: 
+      objectReference: {fileID: 8300000, guid: 750bb46955f3cb84a935cc8fcb674e79, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e989ff0c4211ef14893397b4d89b0722, type: 3}

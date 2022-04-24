@@ -9,6 +9,7 @@ public class Sniper : MonoBehaviour
     private int sniperCooldownCounter = 0;
     public GameObject bulletPrefab;
     public Transform sniperFirePoint;
+    public AudioClip tirSon;
 
     // Update is called once per frame
     void Update()
@@ -42,6 +43,7 @@ public class Sniper : MonoBehaviour
             {
                 ShootSniper();
                 sniperCooldownCounter = 1;
+                AudioManager.instance.PlayClipAt(tirSon, transform.position);
             }
         }
     }

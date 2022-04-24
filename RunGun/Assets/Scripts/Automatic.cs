@@ -10,6 +10,7 @@ public class Automatic : MonoBehaviour
     private int AutomaticCooldownCounter = 1;
     public GameObject bulletPrefab;
     public Transform automaticFirePoint;
+    public AudioClip tirSon;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,7 @@ public class Automatic : MonoBehaviour
         {
             ShootAutomatic();
         }
+        AudioManager.instance.PlayClipAt(tirSon, transform.position);
     }
 
     void ShootAutomatic()

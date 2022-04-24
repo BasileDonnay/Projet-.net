@@ -9,6 +9,7 @@ public class Rpg : MonoBehaviour
     private int rpgCooldownCounter = 0;
     public GameObject bulletPrefab;
     public Transform rpgFirePoint;
+    public AudioClip tirSon;
 
     // Update is called once per frame
     void Update()
@@ -44,6 +45,7 @@ public class Rpg : MonoBehaviour
                 rpgCooldownCounter = 1;
             }
         }
+        AudioManager.instance.PlayClipAt(tirSon, transform.position);
     }
 
     void ShootRpg()

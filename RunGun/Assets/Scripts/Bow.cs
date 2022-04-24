@@ -22,6 +22,7 @@ public class Bow : MonoBehaviour
 
     public GameObject arrowPrefab;
     public Transform bowFirePoint;
+    public AudioClip tirSon;
 
     // Start is called before the first frame update
     void Start()
@@ -61,6 +62,7 @@ public class Bow : MonoBehaviour
             {
                 bowSpeedCounter = bowMaxSpeed;
             }
+            AudioManager.instance.PlayClipAt(tirSon, transform.position);
         }
         else
         {
