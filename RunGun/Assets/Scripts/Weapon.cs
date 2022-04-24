@@ -17,7 +17,7 @@ public class Weapon : MonoBehaviour
     }
 
     // Update is called once per frame
-    /*void Update()
+    void Update()
     {
         GunSelection();
     }
@@ -35,7 +35,7 @@ public class Weapon : MonoBehaviour
             ChangeActiveGun();
         }
     }
-*/
+
     void ChangeActiveGun()
     {
         for (int i = 0; i < guns.Count; i++)
