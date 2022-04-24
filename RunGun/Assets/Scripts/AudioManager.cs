@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
+        // Permet de montrer qu'il y a deux AudioMixer (sans le principal)
         if(instance != null)
         {
             Debug.LogWarning("Il y a plus d'une instance AudioManager dans la scène");
@@ -27,6 +28,8 @@ public class AudioManager : MonoBehaviour
         audioSource.Play();
     }
 
+    /* Le code ci-dessous nous permet que les effets sonores du jeu puissent etre réglé depuis le slider effets sonores et non musique. Si nous avions juste rajoutés
+     une AudioSource dans unity, il aurait fallu régler tout le son du jeu avec un seul slider*/
     public AudioSource PlayClipAt(AudioClip clip, Vector3 pos)
     {
         GameObject tempGo = new GameObject("TempAudio");

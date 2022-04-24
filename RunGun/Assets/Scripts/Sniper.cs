@@ -9,7 +9,7 @@ public class Sniper : MonoBehaviour
     private int sniperCooldownCounter = 0;
     public GameObject bulletPrefab;
     public Transform sniperFirePoint;
-    public AudioClip tirSon;
+    public AudioClip tirSon; // Cela va permettre de mettre l'effet sonore pour le sniper dans unity
 
     // Update is called once per frame
     void Update()
@@ -43,7 +43,9 @@ public class Sniper : MonoBehaviour
             {
                 ShootSniper();
                 sniperCooldownCounter = 1;
-                AudioManager.instance.PlayClipAt(tirSon, transform.position);
+                AudioManager.instance.PlayClipAt(tirSon, transform.position); /*C'est les caractéristiques que l'effet sonore du Sniper va avoir,
+                on a écris la ligne spécifiquement ici afin que le son vient lorsqu'on tire et non avant. le transform.position a pour but que 
+                le son du bruit ne soit que auditible là où on est, c'est-à-dire, si un ennemi qui est de l'autre bout de la map tire, on entendra pas le son. */
             }
         }
     }
