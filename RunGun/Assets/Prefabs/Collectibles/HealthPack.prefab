@@ -135,3 +135,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthAmount: 100
+  CoeurSon: {fileID: 8300000, guid: 996a78cc2357b7249913b59efce0046f, type: 3}

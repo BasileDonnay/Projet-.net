@@ -5,6 +5,7 @@ using UnityEngine;
 public class Healthpack : MonoBehaviour
 {
     public int healthAmount = 100;
+    public AudioClip CoeurSon;
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
@@ -12,6 +13,7 @@ public class Healthpack : MonoBehaviour
         Health health = hitInfo.GetComponent<Health>();
         if (health != null)
         {
+            AudioManager.instance.PlayClipAt(CoeurSon, transform.position);
             health.GiveHealth(healthAmount);
             Destroy(gameObject);
         }
