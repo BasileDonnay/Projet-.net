@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public int timeBeforeExplode = 50;
-    public int damage = 35;
+    public int damage = 30;
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
