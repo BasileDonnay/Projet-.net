@@ -8,20 +8,25 @@ public class PS4Control : MonoBehaviour
 {
    
 
-    // Update is called once per frame
-    void Update()
-    {
-// déplacement 
-        transform.Translate(Vector3.forward * Input.GetAxis("Vertical") * 3 * Time.deltaTime);
-        transform.Translate(Vector3.right * Input.GetAxis("Horizontal") * 3 * Time.deltaTime);
-        
-        //Saut
+   void Start()
+   {
 
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            GetComponent<Rigidbody>().AddForce(Vector3.up * 200); 
-        }
-    }
+   for (int i =0; i< Gamepad.all.Count; i++)
+{
+     
+     Debug.Log(Gamepad.all[i].name);
+}
+
+   }
+
+   void Update()
+   {
+
+       
+   }
+
+
+
 }
 
 

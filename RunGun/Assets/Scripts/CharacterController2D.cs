@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CharacterController2D : MonoBehaviour
 {
@@ -14,9 +15,29 @@ public class CharacterController2D : MonoBehaviour
     public Transform groundCheckRight;
     private bool isGrounded = true;
     public Rigidbody2D rb;
-    public bool PS4Control = false;
+    GameObject player = null;
 
     // Update is called once per frame
+
+
+ void Start()
+   {
+
+   for (int i =0; i< Gamepad.all.Count; i++)
+{
+     
+     Debug.Log(Gamepad.all[i].name);
+}
+
+player = GameObject.Find("Players");
+
+   }
+
+
+
+
+
+
     void FixedUpdate()
     {
         horizontalMove = Input.GetAxisRaw(horizontal) / movementSpeed;
@@ -25,29 +46,23 @@ public class CharacterController2D : MonoBehaviour
 
     void Update()
     {
-        if(PS4Control==true){
-            // déplacement 
-        transform.Translate(Vector3.forward * Input.GetAxis("Vertical") * 3 * Time.deltaTime);
-        transform.Translate(Vector3.right * Input.GetAxis("Horizontal") * 3 * Time.deltaTime);
-        
-        //Saut
-
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            GetComponent<Rigidbody>().AddForce(Vector3.up * 200); 
-        }
-
-
-        
-        }else{
-
         isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckRight.position);
 
         if (Input.GetButtonDown(vertical) && Input.GetAxisRaw(vertical) == 1 && isGrounded)
         {
             rb.AddForce(new Vector2(0f, jumpForce));
         }
-    }
+ // si le noubre de manette est supèrieur a 0
+        if(Gamepad.all.Count > 0){
+// si on appuie sur le bouton gauche de la manette
+if (Gamepad.all[0].leftStick.left.isPressed){
+
+    player.transform.position += Vector3.left * Time.deltaTime *  5f;
+}
+
+        }
 
     }
+
+    
 }
