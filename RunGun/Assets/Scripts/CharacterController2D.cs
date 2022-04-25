@@ -14,23 +14,53 @@ public class CharacterController2D : MonoBehaviour
     public Transform groundCheckRight;
     private bool isGrounded = true;
     public Rigidbody2D rb;
+    public bool ManettePS4 = false;
 
     // Update is called once per frame
+
+
+
     void FixedUpdate()
     {
         horizontalMove = Input.GetAxisRaw(horizontal) / movementSpeed;
         transform.position += new Vector3(horizontalMove, 0, 0);
+
+
+
+
     }
 
     void Update()
     {
+
+        if(ManettePS4==true){
+
+        // déplacement 
+        transform.Translate(Vector3.forward * Input.GetAxis("Vertical") * 3 * Time.deltaTime);
+        transform.Translate(Vector3.right * Input.GetAxis("Horizontal") * 3 * Time.deltaTime);
+        
+        //Saut
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            GetComponent<Rigidbody>().AddForce(Vector3.up * 200); 
+        }
+
+ }else{
+
         isGrounded = Physics2D.OverlapArea(groundCheckLeft.position, groundCheckRight.position);
 
         if (Input.GetButtonDown(vertical) && Input.GetAxisRaw(vertical) == 1 && isGrounded)
         {
             rb.AddForce(new Vector2(0f, jumpForce));
         }
+ 
+ }
+
     }
+
+
+    
 
     
 }
