@@ -10,6 +10,7 @@ public class EnemyAi : MonoBehaviour
     private Transform target;
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
+    public string targetTag = "Player";
 
     Path path;
     int currentWaypoint = 0;
@@ -24,7 +25,7 @@ public class EnemyAi : MonoBehaviour
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
 
-        targets = GameObject.FindGameObjectsWithTag("Player");
+        targets = GameObject.FindGameObjectsWithTag(targetTag);
         foreach (GameObject gameObject in targets)
         {
             positions.Add(gameObject.transform);

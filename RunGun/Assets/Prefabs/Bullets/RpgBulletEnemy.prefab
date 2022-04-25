@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8471129345831411697}
   - component: {fileID: -2166041730163106550}
   m_Layer: 0
-  m_Name: RpgBullet
+  m_Name: RpgBulletEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

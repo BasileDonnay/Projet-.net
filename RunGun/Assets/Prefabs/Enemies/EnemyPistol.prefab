@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 36022797636395250}
   m_Layer: 0
   m_Name: EnemyPistol
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -223,9 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  heart1: {fileID: 36022797563322765}
-  heart2: {fileID: 36022797563322765}
-  heart3: {fileID: 36022797563322765}
+  hearts: []
   deathEffect: {fileID: 8885089416783658042, guid: e4b244ca4cce8f146a0111d8c56472c4, type: 3}
 --- !u!1 &36022797639776460
 GameObject:

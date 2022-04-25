@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 5199804494064249127}
   m_Layer: 0
   m_Name: EnemySniper
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,9 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  heart1: {fileID: 5212512120716789943}
-  heart2: {fileID: 5212512120716789943}
-  heart3: {fileID: 5212512120716789943}
+  hearts: []
   deathEffect: {fileID: 8885089416783658042, guid: e4b244ca4cce8f146a0111d8c56472c4, type: 3}
 --- !u!114 &5199804494064249127
 MonoBehaviour:
