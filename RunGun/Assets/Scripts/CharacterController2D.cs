@@ -35,13 +35,17 @@ player = GameObject.Find("Players");
 
 
 
-
-
-
     void FixedUpdate()
     {
-        horizontalMove = Input.GetAxisRaw(horizontal) / movementSpeed;
+        if (Gamepad.all[0].leftStick.left.isPressed){
+
+    player.transform.position += Vector3.left * Time.deltaTime *  5f;
+}else{
+horizontalMove = Input.GetAxisRaw(horizontal) / movementSpeed;
         transform.position += new Vector3(horizontalMove, 0, 0);
+}
+
+        
     }
 
     void Update()
