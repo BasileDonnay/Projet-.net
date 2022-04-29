@@ -29,7 +29,9 @@ public class CharacterController2D : MonoBehaviour
      Debug.Log(Gamepad.all[i].name);
 }
 
-player = GameObject.Find("Players");
+player = GameObject.Find("Player 1");
+//player2 = GameObject.Find("Player 2");
+//player3 = GameObject.Find("Player 3");
 
    }
 
@@ -37,13 +39,32 @@ player = GameObject.Find("Players");
 
     void FixedUpdate()
     {
+        // aller a gauche
         if (Gamepad.all[0].leftStick.left.isPressed){
 
-    player.transform.position += Vector3.left * Time.deltaTime *  5f;
+    player.transform.position += Vector3.left * Time.deltaTime *  2f;
 }else{
 horizontalMove = Input.GetAxisRaw(horizontal) / movementSpeed;
         transform.position += new Vector3(horizontalMove, 0, 0);
 }
+
+
+// aller a droite
+if (Gamepad.all[0].leftStick.right.isPressed){
+
+    player.transform.position += Vector3.right * Time.deltaTime *  2f;
+}
+
+// aller en haut 
+
+if (Gamepad.all[0].leftStick.up.isPressed){
+
+    player.transform.position += Vector3.up * Time.deltaTime * 2f;
+}
+
+
+
+
 
         
     }
@@ -55,15 +76,6 @@ horizontalMove = Input.GetAxisRaw(horizontal) / movementSpeed;
         if (Input.GetButtonDown(vertical) && Input.GetAxisRaw(vertical) == 1 && isGrounded)
         {
             rb.AddForce(new Vector2(0f, jumpForce));
-        }
- // si le noubre de manette est supèrieur a 0
-        if(Gamepad.all.Count > 0){
-// si on appuie sur le bouton gauche de la manette
-if (Gamepad.all[0].leftStick.left.isPressed){
-
-    player.transform.position += Vector3.left * Time.deltaTime *  5f;
-}
-
         }
 
     }
