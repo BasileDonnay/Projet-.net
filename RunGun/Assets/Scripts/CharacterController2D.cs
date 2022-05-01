@@ -16,6 +16,7 @@ public class CharacterController2D : MonoBehaviour
     private bool isGrounded = true;
     public Rigidbody2D rb;
     GameObject player = null;
+    
 
     // Update is called once per frame
 
