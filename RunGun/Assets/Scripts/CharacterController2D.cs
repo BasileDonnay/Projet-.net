@@ -33,6 +33,7 @@ public class CharacterController2D : MonoBehaviour
 player = GameObject.Find("Player 1");
 //player2 = GameObject.Find("Player 2");
 //player3 = GameObject.Find("Player 3");
+//player3 = GameObject.Find("Player 4");
 
    }
 
@@ -44,10 +45,45 @@ player = GameObject.Find("Player 1");
         if (Gamepad.all[0].leftStick.left.isPressed){
 
     player.transform.position += Vector3.left * Time.deltaTime *  2f;
-}else{
+    }
+
+   /*     if (Gamepad.all[1].leftStick.left.isPressed){
+
+    player2.transform.position += Vector3.left * Time.deltaTime *  2f;
+    }
+
+*/
+
+/*
+    if (Gamepad.all[2].leftStick.left.isPressed){
+
+    player3.transform.position += Vector3.left * Time.deltaTime *  2f;
+    }
+
+*/
+
+
+/*
+       if (Gamepad.all[3].leftStick.left.isPressed){
+
+    player4.transform.position += Vector3.left * Time.deltaTime *  2f;
+    }
+
+*/
+
+
+else{
 horizontalMove = Input.GetAxisRaw(horizontal) / movementSpeed;
         transform.position += new Vector3(horizontalMove, 0, 0);
 }
+
+
+
+
+
+
+
+
 
 
 // aller a droite
@@ -56,6 +92,25 @@ if (Gamepad.all[0].leftStick.right.isPressed){
     player.transform.position += Vector3.right * Time.deltaTime *  2f;
 }
 
+/*
+if (Gamepad.all[1].leftStick.right.isPressed){
+
+    player1.transform.position += Vector3.right * Time.deltaTime *  2f;
+}
+
+if (Gamepad.all[2].leftStick.right.isPressed){
+
+    player2.transform.position += Vector3.right * Time.deltaTime *  2f;
+}
+
+if (Gamepad.all[3].leftStick.right.isPressed){
+
+    player3.transform.position += Vector3.right * Time.deltaTime *  2f;
+}
+
+*/
+
+
 // aller en haut 
 
 if (Gamepad.all[0].leftStick.up.isPressed){
@@ -63,7 +118,23 @@ if (Gamepad.all[0].leftStick.up.isPressed){
     player.transform.position += Vector3.up * Time.deltaTime * 2f;
 }
 
+/*
+if (Gamepad.all[1].leftStick.up.isPressed){
 
+    player1.transform.position += Vector3.up * Time.deltaTime * 2f;
+}
+
+if (Gamepad.all[2].leftStick.up.isPressed){
+
+    player2.transform.position += Vector3.up * Time.deltaTime * 2f;
+}
+
+if (Gamepad.all[3].leftStick.up.isPressed){
+
+    player3.transform.position += Vector3.up * Time.deltaTime * 2f;
+}
+
+*/
 
 
 
