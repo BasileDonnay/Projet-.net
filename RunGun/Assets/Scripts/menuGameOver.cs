@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class menuGameOver : MonoBehaviour
 {
-    public void menu_GameOver();
+    public void menu_GameOver(){
         gameObject.SetActive(true);
+    }
 }

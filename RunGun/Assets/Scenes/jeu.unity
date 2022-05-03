@@ -35075,7 +35075,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &840558732
 RectTransform:
   m_ObjectHideFlags: 0
@@ -36998,6 +36998,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1899766160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 950031930664488971, guid: e989ff0c4211ef14893397b4d89b0722, type: 3}
+  m_PrefabInstance: {fileID: 950031929764891952}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1949163244 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1443413872459722585, guid: f72e7ade6f97a6243b0520bd4910778a, type: 3}
@@ -37545,8 +37550,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950031929389689446, guid: e989ff0c4211ef14893397b4d89b0722, type: 3}
       propertyPath: playerAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 950031929389689446, guid: e989ff0c4211ef14893397b4d89b0722, type: 3}
+      propertyPath: players.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 950031929389689446, guid: e989ff0c4211ef14893397b4d89b0722, type: 3}
+      propertyPath: players.Array.data[3]
+      value: 
+      objectReference: {fileID: 1899766160}
     - target: {fileID: 950031929389689447, guid: e989ff0c4211ef14893397b4d89b0722, type: 3}
       propertyPath: m_RootOrder
       value: 11
