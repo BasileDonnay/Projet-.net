@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Weapon : MonoBehaviour
 {
@@ -24,6 +25,24 @@ public class Weapon : MonoBehaviour
 
     void GunSelection ()
     {
+
+// selection des armes avec les joysticks
+if (Gamepad.all[0].leftStick.down.isPressed){
+
+    gunSelect++;
+            if (gunSelect >= inventory.Count)
+            {
+                gunSelect = 0;
+            }
+
+            ChangeActiveGun();
+}
+
+
+
+
+
+
         if (Input.GetButtonDown(vertical) && Input.GetAxisRaw(vertical) == -1)
         {
             gunSelect++;

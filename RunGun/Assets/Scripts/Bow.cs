@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Bow : MonoBehaviour
 {
@@ -65,7 +66,7 @@ public class Bow : MonoBehaviour
         }
         else
         {
-            if (fireButtonDown)
+            if (fireButtonDown )
             {
                 ShootBow();
             }

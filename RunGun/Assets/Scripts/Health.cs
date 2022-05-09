@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class Health : MonoBehaviour
 {
     public int maxHealth = 100;
     private int health;
+    public static event Action MortPerso;
 
     public List<GameObject> hearts = new List<GameObject>();
     public GameObject deathEffect;
@@ -54,5 +56,6 @@ public class Health : MonoBehaviour
     {
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
+        MortPerso?.Invoke();
     }
 }

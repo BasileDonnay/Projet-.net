@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerAmount : MonoBehaviour
 {
@@ -21,5 +22,17 @@ public class PlayerAmount : MonoBehaviour
                 players[i].SetActive(false);
             }
         }
+
+
+     
+   if(Gamepad.all.Count==1){
+
+       playerAmount+=1;
+  
+
+   }
+
+
+
     }
 }
