@@ -44,7 +44,7 @@ player = GameObject.Find("Player 1");
         // aller a gauche
         if (Gamepad.all[0].leftStick.left.isPressed){
 
-    player.transform.position += Vector3.left * Time.deltaTime *  2f;
+    player.transform.position += Vector3.left * Time.deltaTime *  3f;
     }
 
    /*     if (Gamepad.all[1].leftStick.left.isPressed){
