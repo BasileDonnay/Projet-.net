@@ -30815,11 +30815,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa586c6bee8e3af41b01ea345ec8e258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  graphics: {fileID: 0}
 --- !u!1 &101077203
 GameObject:
   m_ObjectHideFlags: 0
@@ -37468,11 +37463,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa586c6bee8e3af41b01ea345ec8e258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  waypoints:
-  - {fileID: 1284505405}
-  - {fileID: 2092075803}
-  graphics: {fileID: 2093917733}
 --- !u!61 &2093917732
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37777,6 +37767,10 @@ PrefabInstance:
       value: Players
       objectReference: {fileID: 0}
     - target: {fileID: 950031929389689445, guid: e989ff0c4211ef14893397b4d89b0722, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 950031929389689445, guid: e989ff0c4211ef14893397b4d89b0722, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -37786,7 +37780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 950031929389689446, guid: e989ff0c4211ef14893397b4d89b0722, type: 3}
       propertyPath: playerAmount
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 950031929389689446, guid: e989ff0c4211ef14893397b4d89b0722, type: 3}
       propertyPath: players.Array.size

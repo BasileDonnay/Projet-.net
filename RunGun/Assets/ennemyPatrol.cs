@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public class ennemyPatrol : MonoBehaviour
 {
@@ -32,3 +32,4 @@ public class ennemyPatrol : MonoBehaviour
 }
 
   
+*/
