@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerAmount : MonoBehaviour
 {
@@ -24,15 +25,15 @@ public class PlayerAmount : MonoBehaviour
         }
 
 
-     
-   if(Gamepad.all.Count==1){
-
-       playerAmount+=1;
-  
-
-   }
+       if(Gamepad.all.Count==1)
+        {
+           playerAmount+=1;
+        }
 
 
-
+       //if(playerAmount == 0)
+        //{
+          //  SceneManager.LoadScene("GameOver");
+        //}
     }
 }

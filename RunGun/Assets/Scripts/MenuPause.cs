@@ -21,8 +21,6 @@ public class MenuPause : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneID);
-
-    
     }
 
 }
