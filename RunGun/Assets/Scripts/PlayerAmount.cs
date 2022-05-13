@@ -29,11 +29,5 @@ public class PlayerAmount : MonoBehaviour
         {
            playerAmount+=1;
         }
-
-
-       //if(playerAmount == 0)
-        //{
-          //  SceneManager.LoadScene("GameOver");
-        //}
     }
 }

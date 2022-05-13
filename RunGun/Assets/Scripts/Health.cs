@@ -12,6 +12,8 @@ public class Health : MonoBehaviour
     public List<GameObject> hearts = new List<GameObject>();
     public GameObject deathEffect;
 
+    public int isPlayer = 1;
+
     void Start()
     {
         health = maxHealth;
@@ -56,6 +58,9 @@ public class Health : MonoBehaviour
     {
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
-        SceneManager.LoadScene("GameOver");
+        if(isPlayer == 1)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }

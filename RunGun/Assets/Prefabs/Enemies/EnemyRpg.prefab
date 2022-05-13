@@ -295,6 +295,7 @@ MonoBehaviour:
   maxHealth: 100
   hearts: []
   deathEffect: {fileID: 8885089416783658042, guid: e4b244ca4cce8f146a0111d8c56472c4, type: 3}
+  isPlayer: 0
 --- !u!114 &4400136759996561271
 MonoBehaviour:
   m_ObjectHideFlags: 0
