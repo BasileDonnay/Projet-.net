@@ -58,9 +58,9 @@ public class Health : MonoBehaviour
     {
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
-        if(isPlayer == 1)
+        if(isPlayer == 1) //Le joueur normal est player 1, l'ennemi est le player 0
         {
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("GameOver"); // Ramène à la scène Menu Game Over
         }
     }
 }

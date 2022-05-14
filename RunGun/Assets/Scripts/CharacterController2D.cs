@@ -115,7 +115,7 @@ if (Gamepad.all[3].leftStick.right.isPressed){
 
 if (Gamepad.all[0].leftStick.up.isPressed){
 
-    player.transform.position += Vector3.up * Time.deltaTime * 2f;
+    player.transform.position += Vector3.up * Time.deltaTime * 3f;
 }
 
 /*
