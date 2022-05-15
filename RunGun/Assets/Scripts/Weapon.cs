@@ -26,17 +26,7 @@ public class Weapon : MonoBehaviour
     void GunSelection ()
     {
 
-// selection des armes avec les joysticks
-if (Gamepad.all[0].leftStick.down.isPressed){
 
-    gunSelect++;
-            if (gunSelect >= inventory.Count)
-            {
-                gunSelect = 0;
-            }
-
-            ChangeActiveGun();
-}
 
 
 
