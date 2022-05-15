@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class CharacterController2D : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 50f;
-    [SerializeField] private int jumpForce = 250;
+    private int jumpForce = 320;
     public string horizontal = "Horizontal";
     public string vertical = "Vertical";
 

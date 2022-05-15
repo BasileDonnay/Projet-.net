@@ -252,7 +252,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950031928933034249}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5589255c7c795a84c8f32b42d26bce5d, type: 3}
   m_Name: 
@@ -478,7 +478,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 20
-  jumpForce: 250
   horizontal: Horizontal4
   vertical: Vertical4
   groundCheckLeft: {fileID: 950031929776801028}
@@ -568,6 +567,7 @@ MonoBehaviour:
   - {fileID: 950031930012573284}
   - {fileID: 950031930611911960}
   deathEffect: {fileID: 8885089416783658042, guid: e4b244ca4cce8f146a0111d8c56472c4, type: 3}
+  isPlayer: 1
 --- !u!1 &950031928955617105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,7 +1611,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 20
-  jumpForce: 250
   horizontal: Horizontal3
   vertical: Vertical3
   groundCheckLeft: {fileID: 950031929800696035}
@@ -1701,6 +1700,7 @@ MonoBehaviour:
   - {fileID: 950031930603625863}
   - {fileID: 950031929547087500}
   deathEffect: {fileID: 8885089416783658042, guid: e4b244ca4cce8f146a0111d8c56472c4, type: 3}
+  isPlayer: 1
 --- !u!1 &950031929135848939
 GameObject:
   m_ObjectHideFlags: 0
@@ -3685,7 +3685,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 20
-  jumpForce: 250
   horizontal: Horizontal
   vertical: Vertical
   groundCheckLeft: {fileID: 950031929109044113}
@@ -3775,6 +3774,7 @@ MonoBehaviour:
   - {fileID: 950031930548958676}
   - {fileID: 950031930938550400}
   deathEffect: {fileID: 8885089416783658042, guid: e4b244ca4cce8f146a0111d8c56472c4, type: 3}
+  isPlayer: 1
 --- !u!114 &950031929415678593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4153,7 +4153,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 20
-  jumpForce: 250
   horizontal: Horizontal2
   vertical: Vertical2
   groundCheckLeft: {fileID: 950031930518610352}
@@ -4243,6 +4242,7 @@ MonoBehaviour:
   - {fileID: 950031929612389232}
   - {fileID: 950031929631077927}
   deathEffect: {fileID: 8885089416783658042, guid: e4b244ca4cce8f146a0111d8c56472c4, type: 3}
+  isPlayer: 1
 --- !u!1 &950031929547087500
 GameObject:
   m_ObjectHideFlags: 0
@@ -6534,7 +6534,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950031929863610305}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5589255c7c795a84c8f32b42d26bce5d, type: 3}
   m_Name: 
@@ -6808,7 +6808,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 20
-  jumpForce: 250
   horizontal: Horizontal2
   vertical: Vertical2
   groundCheckLeft: {fileID: 950031930089156637}
@@ -6898,6 +6897,7 @@ MonoBehaviour:
   - {fileID: 950031929189648794}
   - {fileID: 950031929046032264}
   deathEffect: {fileID: 8885089416783658042, guid: e4b244ca4cce8f146a0111d8c56472c4, type: 3}
+  isPlayer: 1
 --- !u!1 &950031929905663069
 GameObject:
   m_ObjectHideFlags: 0
@@ -7602,7 +7602,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 20
-  jumpForce: 250
   horizontal: Horizontal3
   vertical: Vertical3
   groundCheckLeft: {fileID: 950031930438251983}
@@ -7692,6 +7691,7 @@ MonoBehaviour:
   - {fileID: 950031930610040674}
   - {fileID: 950031930599445746}
   deathEffect: {fileID: 8885089416783658042, guid: e4b244ca4cce8f146a0111d8c56472c4, type: 3}
+  isPlayer: 1
 --- !u!1 &950031930045713651
 GameObject:
   m_ObjectHideFlags: 0
@@ -8693,7 +8693,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 20
-  jumpForce: 250
   horizontal: Horizontal2
   vertical: Vertical2
   groundCheckLeft: {fileID: 950031930178811139}
@@ -8783,6 +8782,7 @@ MonoBehaviour:
   - {fileID: 950031930300589515}
   - {fileID: 950031930524339960}
   deathEffect: {fileID: 8885089416783658042, guid: e4b244ca4cce8f146a0111d8c56472c4, type: 3}
+  isPlayer: 1
 --- !u!1 &950031930178811138
 GameObject:
   m_ObjectHideFlags: 0
@@ -11020,7 +11020,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 20
-  jumpForce: 250
   horizontal: Horizontal
   vertical: Vertical
   groundCheckLeft: {fileID: 950031930430702061}
@@ -11110,6 +11109,7 @@ MonoBehaviour:
   - {fileID: 950031930193393961}
   - {fileID: 950031930712812485}
   deathEffect: {fileID: 8885089416783658042, guid: e4b244ca4cce8f146a0111d8c56472c4, type: 3}
+  isPlayer: 1
 --- !u!1 &950031930498310941
 GameObject:
   m_ObjectHideFlags: 0
@@ -11533,7 +11533,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 20
-  jumpForce: 250
   horizontal: Horizontal
   vertical: Vertical
   groundCheckLeft: {fileID: 950031930540161559}
@@ -11623,6 +11622,7 @@ MonoBehaviour:
   - {fileID: 950031929774798784}
   - {fileID: 950031930702870719}
   deathEffect: {fileID: 8885089416783658042, guid: e4b244ca4cce8f146a0111d8c56472c4, type: 3}
+  isPlayer: 1
 --- !u!1 &950031930562577480
 GameObject:
   m_ObjectHideFlags: 0
@@ -12253,7 +12253,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 20
-  jumpForce: 250
   horizontal: Horizontal
   vertical: Vertical
   groundCheckLeft: {fileID: 950031929895504731}
@@ -12343,6 +12342,7 @@ MonoBehaviour:
   - {fileID: 950031931028503303}
   - {fileID: 950031929927061793}
   deathEffect: {fileID: 8885089416783658042, guid: e4b244ca4cce8f146a0111d8c56472c4, type: 3}
+  isPlayer: 1
 --- !u!1 &950031930627148754
 GameObject:
   m_ObjectHideFlags: 0
