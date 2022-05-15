@@ -11,8 +11,8 @@ public class FinJeu : MonoBehaviour
         }
     }
 
-    public void RetourM(int sceneID)
+    public void RetourM(int sceneID) // int car nombre sans virgules
     {
-        SceneManager.LoadScene(sceneID);
+        SceneManager.LoadScene(sceneID); // charge la scène dont on va mettre le numéro
     }
 }
